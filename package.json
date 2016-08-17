@@ -1,1 +1,1 @@
-{"name":"hellogrpc","version":"0.0.1471235537","description":"Hello GRPC","homepage":"","author":"StackMachine","engines":{"node":"\u003e= v4.0.0"},"main":"main.js","dependencies":{"google-protobuf":"3.0.0","grpc":"0.15.0"},"license":"MIT"}
+{"name":"hellogrpc","version":"0.0.1471414830","description":"Hello GRPC","homepage":"","author":"StackMachine","engines":{"node":"\u003e= v4.0.0"},"main":"main.js","dependencies":{"google-protobuf":"3.0.0","grpc":"0.15.0"},"license":"MIT"}
