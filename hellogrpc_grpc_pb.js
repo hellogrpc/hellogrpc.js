@@ -34,25 +34,25 @@
 var grpc = require('grpc');
 var hellogrpc_pb = require('./hellogrpc_pb.js');
 
-function serialize_HelloReply(arg) {
+function serialize_hellogrpc_HelloReply(arg) {
   if (!(arg instanceof hellogrpc_pb.HelloReply)) {
-    throw new Error('Expected argument of type HelloReply');
+    throw new Error('Expected argument of type hellogrpc.HelloReply');
   }
   return new Buffer(arg.serializeBinary());
 }
 
-function deserialize_HelloReply(buffer_arg) {
+function deserialize_hellogrpc_HelloReply(buffer_arg) {
   return hellogrpc_pb.HelloReply.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_HelloRequest(arg) {
+function serialize_hellogrpc_HelloRequest(arg) {
   if (!(arg instanceof hellogrpc_pb.HelloRequest)) {
-    throw new Error('Expected argument of type HelloRequest');
+    throw new Error('Expected argument of type hellogrpc.HelloRequest');
   }
   return new Buffer(arg.serializeBinary());
 }
 
-function deserialize_HelloRequest(buffer_arg) {
+function deserialize_hellogrpc_HelloRequest(buffer_arg) {
   return hellogrpc_pb.HelloRequest.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
@@ -66,10 +66,10 @@ var GreeterService = exports.GreeterService = {
     responseStream: false,
     requestType: hellogrpc_pb.HelloRequest,
     responseType: hellogrpc_pb.HelloReply,
-    requestSerialize: serialize_HelloRequest,
-    requestDeserialize: deserialize_HelloRequest,
-    responseSerialize: serialize_HelloReply,
-    responseDeserialize: deserialize_HelloReply,
+    requestSerialize: serialize_hellogrpc_HelloRequest,
+    requestDeserialize: deserialize_hellogrpc_HelloRequest,
+    responseSerialize: serialize_hellogrpc_HelloReply,
+    responseDeserialize: deserialize_hellogrpc_HelloReply,
   },
 };
 
